@@ -39,7 +39,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1,p {
+h1,h2, p {
   font-size: 2em;
   margin: 0;
   padding: 0;
