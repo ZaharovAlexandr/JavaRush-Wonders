@@ -1,30 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./vendor/fonts.css">
-    <title>Wonders</title>
-</head>
-<body class="body">
-    <header class="header">
-        <div class="logo__container">
-            <img class="logo__image" src="./assets/icons/Logo.svg" alt="Логотип">
-            <span class="logo__text">Wonders</span>
-        </div>
-        <nav class="navigation">
-            <ul class="navigation__link-container">
-                <a class="navigation__link" href="#"><li>Mobile App</li></a>
-                <a class="navigation__link" href="#"><li>FAQs</li></a>
-                <a class="navigation__link" href="#"><li>Contact</li></a>
-                <a class="navigation__link" href="#"><li>Sign Up</li></a>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
 
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./vendor/normalize.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./vendor/fonts.css" />
+  <title>Wonders</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="logo__container">
+      <img class="logo__image" src="./assets/icons/Logo.svg" alt="Логотип" />
+      <span class="logo__text">Wonders</span>
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__link-container">
+        <a class="navigation__link" href="#">
+          <li>Mobile App</li>
+        </a>
+        <a class="navigation__link" href="#">
+          <li>FAQs</li>
+        </a>
+        <a class="navigation__link" href="#">
+          <li>Contact</li>
+        </a>
+        <a class="navigation__link" href="#">
+          <li>Sign Up</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Skip the Climbing, Catch the Bus</h1>
+      <p class="main__paragraph">
+        We sell tickets to the best seats in the house – houses on wheels,
+        that is! Get ready for jaw-dropping views without breaking a sweat.
+      </p>
+      <div class="booking">
+        <div class="booking__way-container">
+          <label class="booking__radio-container">
+            <input class="booking__radio" type="radio" name="way" checked id="radioTwoWayButton" />
+            <span class="booking__fake-radio"></span>
+            Round trip
+          </label>
+          <label class="booking__radio-container">
+            <input class="booking__radio" type="radio" name="way" id="radioOneWayButton" />
+            <span class="booking__fake-radio"></span>
+            One Way
+          </label>
+          <div class="booking__counter-container">
+            <img src="./assets/icons/Person.svg" alt="person" />
+            <button class="booking__counter-button booking__counter-button_disabled" disabled id="minus">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="minusSVG"
+                  d="M5.22043 9.22C4.78043 9.22 4.44043 9.56 4.44043 10C4.44043 10.44 4.78043 10.78 5.22043 10.78H14.7804C15.2204 10.78 15.5604 10.44 15.5604 10C15.5604 9.56 15.2204 9.22 14.7804 9.22H9.22043H5.22043Z"
+                  fill="grey" fill-opacity="0.5" />
+              </svg>
+            </button>
+            <input class="booking__counter-number" type="number" value="1" min="1" id="personNumber" />
+            <button class="booking__counter-button" id="plus">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.2181 9.21836H5.22305C4.79136 9.21836 4.44141 9.56831 4.44141 10C4.44141 10.4317 4.79136 10.7816 5.22305 10.7816H9.2181V14.7767C9.2181 15.2084 9.56805 15.5583 9.99974 15.5583C10.4314 15.5583 10.7814 15.2084 10.7814 14.7767V10.7816H14.7764C15.2081 10.7816 15.5581 10.4317 15.5581 10C15.5581 9.56831 15.2081 9.21836 14.7764 9.21836H10.7814V5.22331C10.7814 4.79162 10.4314 4.44167 9.99974 4.44167C9.56805 4.44167 9.2181 4.79162 9.2181 5.22331V9.21836Z"
+                  fill="#0578FF" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="booking__station-container">
+          <label class="booking__station-input-label">
+            Departure
+            <input class="booking__station-input" type="text" placeholder="Your City/Station" />
+          </label>
+          <label class="booking__station-input-label">
+            Arrival
+            <input class="booking__station-input" type="text" placeholder="Where to?" />
+          </label>
+
+          <label class="booking__station-input-date-label">
+            Pick your lucky day
+            <div class="booking__station-input-date-container">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5 5H11V4.50468C11 4.21404 11.226 4 11.5047 4H12.4953C12.786 4 13 4.22595 13 4.50468V5H14.7568C15.3028 5 15.75 5.44725 15.75 5.99896V7.00104C15.75 7.55734 15.3053 8 14.7568 8H1.24317C0.697169 8 0.25 7.55275 0.25 7.00104V5.99896C0.25 5.44266 0.694659 5 1.24317 5H3V4.50468C3 4.21404 3.22596 4 3.50468 4H4.49532C4.78596 4 5 4.22595 5 4.50468V5ZM1.50468 9H2.49532C2.78596 9 3 9.22596 3 9.50468V10.4953C3 10.786 2.77404 11 2.49532 11H1.50468C1.21404 11 1 10.774 1 10.4953V9.50468C1 9.21404 1.22595 9 1.50468 9ZM4.50468 9H5.49532C5.78596 9 6 9.22596 6 9.50468V10.4953C6 10.786 5.77404 11 5.49532 11H4.50468C4.21404 11 4 10.774 4 10.4953V9.50468C4 9.21404 4.22596 9 4.50468 9ZM7.50468 9H8.49532C8.78596 9 9 9.22596 9 9.50468V10.4953C9 10.786 8.77404 11 8.49532 11H7.50468C7.21404 11 7 10.774 7 10.4953V9.50468C7 9.21404 7.22596 9 7.50468 9ZM1.50468 12H2.49532C2.78596 12 3 12.226 3 12.5047V13.4953C3 13.786 2.77404 14 2.49532 14H1.50468C1.21404 14 1 13.774 1 13.4953V12.5047C1 12.214 1.22595 12 1.50468 12ZM4.50468 12H5.49532C5.78596 12 6 12.226 6 12.5047V13.4953C6 13.786 5.77404 14 5.49532 14H4.50468C4.21404 14 4 13.774 4 13.4953V12.5047C4 12.214 4.22596 12 4.50468 12ZM7.50468 12H8.49532C8.78596 12 9 12.226 9 12.5047V13.4953C9 13.786 8.77404 14 8.49532 14H7.50468C7.21404 14 7 13.774 7 13.4953V12.5047C7 12.214 7.22596 12 7.50468 12ZM1.50468 15H2.49532C2.78596 15 3 15.226 3 15.5047V16.4953C3 16.786 2.77404 17 2.49532 17H1.50468C1.21404 17 1 16.774 1 16.4953V15.5047C1 15.214 1.22595 15 1.50468 15ZM4.50468 15H5.49532C5.78596 15 6 15.226 6 15.5047V16.4953C6 16.786 5.77404 17 5.49532 17H4.50468C4.21404 17 4 16.774 4 16.4953V15.5047C4 15.214 4.22596 15 4.50468 15ZM7.50468 15H8.49532C8.78596 15 9 15.226 9 15.5047V16.4953C9 16.786 8.77404 17 8.49532 17H7.50468C7.21404 17 7 16.774 7 16.4953V15.5047C7 15.214 7.22596 15 7.50468 15ZM10.5047 9H11.4953C11.786 9 12 9.22596 12 9.50468V10.4953C12 10.786 11.774 11 11.4953 11H10.5047C10.214 11 10 10.774 10 10.4953V9.50468C10 9.21404 10.226 9 10.5047 9ZM10.5047 12H11.4953C11.786 12 12 12.226 12 12.5047V13.4953C12 13.786 11.774 14 11.4953 14H10.5047C10.214 14 10 13.774 10 13.4953V12.5047C10 12.214 10.226 12 10.5047 12ZM10.5047 15H11.4953C11.786 15 12 15.226 12 15.5047V16.4953C12 16.786 11.774 17 11.4953 17H10.5047C10.214 17 10 16.774 10 16.4953V15.5047C10 15.214 10.226 15 10.5047 15ZM13.5047 15H14.4953C14.786 15 15 15.226 15 15.5047V16.4953C15 16.786 14.774 17 14.4953 17H13.5047C13.214 17 13 16.774 13 16.4953V15.5047C13 15.214 13.226 15 13.5047 15ZM1.50468 18H2.49532C2.78596 18 3 18.226 3 18.5047V19.4953C3 19.786 2.77404 20 2.49532 20H1.50468C1.21404 20 1 19.774 1 19.4953V18.5047C1 18.214 1.22595 18 1.50468 18ZM4.50468 18H5.49532C5.78596 18 6 18.226 6 18.5047V19.4953C6 19.786 5.77404 20 5.49532 20H4.50468C4.21404 20 4 19.774 4 19.4953V18.5047C4 18.214 4.22596 18 4.50468 18ZM7.50468 18H8.49532C8.78596 18 9 18.226 9 18.5047V19.4953C9 19.786 8.77404 20 8.49532 20H7.50468C7.21404 20 7 19.774 7 19.4953V18.5047C7 18.214 7.22596 18 7.50468 18ZM10.5047 18H11.4953C11.786 18 12 18.226 12 18.5047V19.4953C12 19.786 11.774 20 11.4953 20H10.5047C10.214 20 10 19.774 10 19.4953V18.5047C10 18.214 10.226 18 10.5047 18ZM13.5047 18H14.4953C14.786 18 15 18.226 15 18.5047V19.4953C15 19.786 14.774 20 14.4953 20H13.5047C13.214 20 13 19.774 13 19.4953V18.5047C13 18.214 13.226 18 13.5047 18ZM13.5047 12H14.4953C14.786 12 15 12.226 15 12.5047V13.4953C15 13.786 14.774 14 14.4953 14H13.5047C13.214 14 13 13.774 13 13.4953V12.5047C13 12.214 13.226 12 13.5047 12ZM13.5047 9H14.4953C14.786 9 15 9.22596 15 9.50468V10.4953C15 10.786 14.774 11 14.4953 11H13.5047C13.214 11 13 10.774 13 10.4953V9.50468C13 9.21404 13.226 9 13.5047 9Z"
+                  fill="#90A3BF" />
+              </svg>
+              <input class="booking__station-input-date" type="date" id="departureDate" />
+              <span class="booking__input-placeholder-date" id="departureSpan">Depart</span>
+            </div>
+          </label>
+          <label class="booking__station-input-date-label booking__station-input-date-label_return">
+            <div class="booking__station-input-date-container" id="returnDateContainer">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5 5H11V4.50468C11 4.21404 11.226 4 11.5047 4H12.4953C12.786 4 13 4.22595 13 4.50468V5H14.7568C15.3028 5 15.75 5.44725 15.75 5.99896V7.00104C15.75 7.55734 15.3053 8 14.7568 8H1.24317C0.697169 8 0.25 7.55275 0.25 7.00104V5.99896C0.25 5.44266 0.694659 5 1.24317 5H3V4.50468C3 4.21404 3.22596 4 3.50468 4H4.49532C4.78596 4 5 4.22595 5 4.50468V5ZM1.50468 9H2.49532C2.78596 9 3 9.22596 3 9.50468V10.4953C3 10.786 2.77404 11 2.49532 11H1.50468C1.21404 11 1 10.774 1 10.4953V9.50468C1 9.21404 1.22595 9 1.50468 9ZM4.50468 9H5.49532C5.78596 9 6 9.22596 6 9.50468V10.4953C6 10.786 5.77404 11 5.49532 11H4.50468C4.21404 11 4 10.774 4 10.4953V9.50468C4 9.21404 4.22596 9 4.50468 9ZM7.50468 9H8.49532C8.78596 9 9 9.22596 9 9.50468V10.4953C9 10.786 8.77404 11 8.49532 11H7.50468C7.21404 11 7 10.774 7 10.4953V9.50468C7 9.21404 7.22596 9 7.50468 9ZM1.50468 12H2.49532C2.78596 12 3 12.226 3 12.5047V13.4953C3 13.786 2.77404 14 2.49532 14H1.50468C1.21404 14 1 13.774 1 13.4953V12.5047C1 12.214 1.22595 12 1.50468 12ZM4.50468 12H5.49532C5.78596 12 6 12.226 6 12.5047V13.4953C6 13.786 5.77404 14 5.49532 14H4.50468C4.21404 14 4 13.774 4 13.4953V12.5047C4 12.214 4.22596 12 4.50468 12ZM7.50468 12H8.49532C8.78596 12 9 12.226 9 12.5047V13.4953C9 13.786 8.77404 14 8.49532 14H7.50468C7.21404 14 7 13.774 7 13.4953V12.5047C7 12.214 7.22596 12 7.50468 12ZM1.50468 15H2.49532C2.78596 15 3 15.226 3 15.5047V16.4953C3 16.786 2.77404 17 2.49532 17H1.50468C1.21404 17 1 16.774 1 16.4953V15.5047C1 15.214 1.22595 15 1.50468 15ZM4.50468 15H5.49532C5.78596 15 6 15.226 6 15.5047V16.4953C6 16.786 5.77404 17 5.49532 17H4.50468C4.21404 17 4 16.774 4 16.4953V15.5047C4 15.214 4.22596 15 4.50468 15ZM7.50468 15H8.49532C8.78596 15 9 15.226 9 15.5047V16.4953C9 16.786 8.77404 17 8.49532 17H7.50468C7.21404 17 7 16.774 7 16.4953V15.5047C7 15.214 7.22596 15 7.50468 15ZM10.5047 9H11.4953C11.786 9 12 9.22596 12 9.50468V10.4953C12 10.786 11.774 11 11.4953 11H10.5047C10.214 11 10 10.774 10 10.4953V9.50468C10 9.21404 10.226 9 10.5047 9ZM10.5047 12H11.4953C11.786 12 12 12.226 12 12.5047V13.4953C12 13.786 11.774 14 11.4953 14H10.5047C10.214 14 10 13.774 10 13.4953V12.5047C10 12.214 10.226 12 10.5047 12ZM10.5047 15H11.4953C11.786 15 12 15.226 12 15.5047V16.4953C12 16.786 11.774 17 11.4953 17H10.5047C10.214 17 10 16.774 10 16.4953V15.5047C10 15.214 10.226 15 10.5047 15ZM13.5047 15H14.4953C14.786 15 15 15.226 15 15.5047V16.4953C15 16.786 14.774 17 14.4953 17H13.5047C13.214 17 13 16.774 13 16.4953V15.5047C13 15.214 13.226 15 13.5047 15ZM1.50468 18H2.49532C2.78596 18 3 18.226 3 18.5047V19.4953C3 19.786 2.77404 20 2.49532 20H1.50468C1.21404 20 1 19.774 1 19.4953V18.5047C1 18.214 1.22595 18 1.50468 18ZM4.50468 18H5.49532C5.78596 18 6 18.226 6 18.5047V19.4953C6 19.786 5.77404 20 5.49532 20H4.50468C4.21404 20 4 19.774 4 19.4953V18.5047C4 18.214 4.22596 18 4.50468 18ZM7.50468 18H8.49532C8.78596 18 9 18.226 9 18.5047V19.4953C9 19.786 8.77404 20 8.49532 20H7.50468C7.21404 20 7 19.774 7 19.4953V18.5047C7 18.214 7.22596 18 7.50468 18ZM10.5047 18H11.4953C11.786 18 12 18.226 12 18.5047V19.4953C12 19.786 11.774 20 11.4953 20H10.5047C10.214 20 10 19.774 10 19.4953V18.5047C10 18.214 10.226 18 10.5047 18ZM13.5047 18H14.4953C14.786 18 15 18.226 15 18.5047V19.4953C15 19.786 14.774 20 14.4953 20H13.5047C13.214 20 13 19.774 13 19.4953V18.5047C13 18.214 13.226 18 13.5047 18ZM13.5047 12H14.4953C14.786 12 15 12.226 15 12.5047V13.4953C15 13.786 14.774 14 14.4953 14H13.5047C13.214 14 13 13.774 13 13.4953V12.5047C13 12.214 13.226 12 13.5047 12ZM13.5047 9H14.4953C14.786 9 15 9.22596 15 9.50468V10.4953C15 10.786 14.774 11 14.4953 11H13.5047C13.214 11 13 10.774 13 10.4953V9.50468C13 9.21404 13.226 9 13.5047 9Z"
+                  fill="#90A3BF" />
+              </svg>
+
+              <input class="booking__station-input-date" type="date" id="returnDate" />
+              <span class="booking__input-placeholder-date" id="returnSpan">Return</span>
+            </div>
+          </label>
+        </div>
+        <button class="booking__submitButton" type="submit">Find My Alpine Ride</button>
+      </div>
+    </div>
+    <img src="./assets/images/mainCard.png" alt="MainCard" />
+  </main>
+  <script src="./script.js"></script>
 </body>
+
 </html>

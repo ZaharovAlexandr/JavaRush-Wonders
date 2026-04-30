@@ -63,3 +63,305 @@
     vertical-align: middle;
 
 }
+
+.booking__way-container {
+    box-sizing: border-box;
+    min-height: 34px;
+    max-width: 640px;
+    width: 100%;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.booking__radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+
+}
+
+.booking__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.booking__fake-radio {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #90A3BF80;
+}
+
+.booking__radio:checked+.booking__fake-radio {
+    background-color: white;
+    border: 6px solid #006AF5;
+}
+
+
+
+
+
+.booking__counter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+}
+
+.booking__counter-button,
+.booking__counter-button:disabled,
+.booking__counter-button_disabled {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    fill: #006AF5;
+}
+
+.booking__counter-button:disabled,
+.booking__counter-button_disabled {
+    cursor: auto;
+}
+
+.booking__counter-number::-webkit-outer-spin-button,
+.booking__counter-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.booking__counter-number[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.booking__counter-number {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    text-align: center;
+}
+
+.booking__counter-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.main {
+    width: 100%;
+    max-width: 1312px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 128px;
+}
+
+.main__container {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.main__title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 64px;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.main__paragraph {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    letter-spacing: 0%;
+    line-height: 1.5;
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.booking__station-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 20px;
+}
+
+.booking__station-input-label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.booking__station-input {
+    margin: 0;
+    padding: 0;
+    max-width: 304px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    min-height: 53px;
+}
+
+.booking__station-input::placeholder {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #90A3BF;
+    padding-left: 24px;
+}
+
+.booking__station-input-date-label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.booking__station-input-date-container {
+    position: relative;
+    max-width: 304px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    min-height: 53px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 24px;
+    column-gap: 12px;
+    box-sizing: border-box;
+}
+
+.booking__station-input-date-container_disable {
+    background-color: rgba(5, 120, 255, 0.1);
+}
+
+.booking__station-input-date {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.booking__input-placeholder-date {
+    pointer-events: none;
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #90A3BF;
+}
+
+.booking__input-placeholder-date_active {
+    color: black;
+}
+
+.booking__station-input-date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    /* Скрываем стандартную иконку, если она проявится */
+}
+
+.booking__station-input-date-label_return {
+    justify-content: end;
+}
+
+.booking__submitButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 120, 255, 1);
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 1);
+    width: 100%;
+    max-width: 640px;
+    min-height: 62px;
+    border: none;
+    border-radius: 10px;
+}
