@@ -4,4 +4,4 @@
 Стек технологий:
 HTML5
 CSS6
-JavaScript
+JS
