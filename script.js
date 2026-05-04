@@ -65,6 +65,7 @@ buttonFaqs.forEach((element, i) => {
     element.addEventListener('click', function() {
     imageFaqs[i].classList.toggle('faqs__image_active')
     textFaqs[i].classList.toggle('faqs__qustion-text_active')
+    textFaqs[i].classList.toggle('faqs__qustion-text_positive')
 })
 });
 
