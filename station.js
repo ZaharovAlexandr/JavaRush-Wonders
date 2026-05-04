@@ -54,19 +54,49 @@ const Stations = [
     "Kranjska Gora Avtobusna Postaja"
 ];
 
-const departureButton = document.querySelector('.booking__station-input')
-const buttonHelper = document.querySelectorAll('.booking__station-help-button');
+const departureButton = document.querySelector('.booking__station-input_departure')
+const buttonDepartureHelper = document.querySelectorAll('.booking__station-help-button_departure');
+const arrivalButton = document.querySelector('.booking__station-input_arrival') 
+const buttonArrivalHelper = document.querySelectorAll('.booking__station-help-button_arrival');
 
-buttonHelper.forEach(element => {
+buttonArrivalHelper.forEach(element => {
     element.addEventListener('mousedown', (e) => {
         e.preventDefault();
     })
 })
 
-buttonHelper.forEach(element => {
+buttonArrivalHelper.forEach(element => {
+    element.addEventListener('click', function(){
+        arrivalButton.value = element.textContent;
+        document.querySelector('.booking__station-help_arrival').classList.toggle('booking__station-help_active')
+    })
+});
+
+arrivalButton.addEventListener('input', function() {
+    let b = Stations.filter(item => {
+        if ((item.toLowerCase()).includes(arrivalButton.value.toLowerCase())) {
+            return true;
+        } 
+    })
+    for (let i = 0; i < buttonArrivalHelper.length; i++) {
+        buttonArrivalHelper[i].textContent = b[i];
+    }
+})
+
+arrivalButton.addEventListener('focus', function() {
+    document.querySelector('.booking__station-help_arrival').classList.toggle('booking__station-help_active')
+})
+
+buttonDepartureHelper.forEach(element => {
+    element.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+    })
+})
+
+buttonDepartureHelper.forEach(element => {
     element.addEventListener('click', function(){
         departureButton.value = element.textContent;
-        document.querySelector('.booking__station-help').classList.toggle('booking__station-help_active')
+        document.querySelector('.booking__station-help_departure').classList.toggle('booking__station-help_active')
     })
 });
 
@@ -76,12 +106,12 @@ departureButton.addEventListener('input', function() {
             return true;
         } 
     })
-    for (let i = 0; i < buttonHelper.length; i++) {
-        buttonHelper[i].textContent = b[i];
+    for (let i = 0; i < buttonDepartureHelper.length; i++) {
+        buttonDepartureHelper[i].textContent = b[i];
     }
 })
 
 departureButton.addEventListener('focus', function() {
-    document.querySelector('.booking__station-help').classList.toggle('booking__station-help_active')
+    document.querySelector('.booking__station-help_departure').classList.toggle('booking__station-help_active')
 })
 

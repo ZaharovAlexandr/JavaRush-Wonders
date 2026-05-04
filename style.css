@@ -256,6 +256,7 @@
     border-radius: 10px;
     min-height: 53px;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .booking__station-input::placeholder {
@@ -296,6 +297,7 @@
 .booking__station-help-button {
     background-color: #FFFFFF;
     border: none;
+    cursor: pointer;
 }
 
 .booking__station-input-date-label {
