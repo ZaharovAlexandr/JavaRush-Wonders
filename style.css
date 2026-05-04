@@ -8,7 +8,7 @@
 }
 
 .header {
-    padding: 42px 0 103px;
+    padding: 30px 0 100px;
     width: 100%;
     max-width: 1312px;
     display: flex;
@@ -22,6 +22,8 @@
     align-items: center;
     justify-content: center;
     column-gap: 15px;
+    max-width: 239px;
+    min-height: 51px;
 }
 
 .logo__text {
@@ -31,6 +33,7 @@
     font-size: 34px;
     line-height: 100%;
 }
+
 .logo__text_white {
     color: #FFFFFF;
 }
@@ -59,7 +62,6 @@
     font-weight: 400;
     font-style: Regular;
     font-size: 20px;
-    leading-trim: NONE;
     line-height: 24px;
     letter-spacing: 0%;
     text-align: center;
@@ -184,7 +186,7 @@
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
-    padding-bottom: 130px;
+    padding-bottom: 127px;
 }
 
 .main__container {
@@ -229,6 +231,7 @@
 }
 
 .booking__station-input-label {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -238,13 +241,13 @@
     font-weight: 600;
     font-style: SemiBold;
     font-size: 16px;
-    leading-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
 }
 
 .booking__station-input {
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
     max-width: 304px;
@@ -252,6 +255,7 @@
     border: none;
     border-radius: 10px;
     min-height: 53px;
+    padding-left: 24px;
 }
 
 .booking__station-input::placeholder {
@@ -263,7 +267,35 @@
     letter-spacing: 0%;
     vertical-align: middle;
     color: #90A3BF;
-    padding-left: 24px;
+    
+}
+
+.booking__station-help {
+    max-width: 304px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 24px -8px rgba(0, 0, 0, 0.16);
+    min-height: 193px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 100px;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    row-gap: 15px;
+    display: none;
+}
+
+.booking__station-help_active {
+    display: flex;
+    
+}
+
+.booking__station-help-button {
+    background-color: #FFFFFF;
+    border: none;
 }
 
 .booking__station-input-date-label {
@@ -318,7 +350,6 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 14px;
-    leading-trim: NONE;
     line-height: 150%;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -356,7 +387,6 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 20px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     text-transform: capitalize;
@@ -411,7 +441,6 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 20px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
@@ -456,7 +485,6 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 64px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -502,7 +530,7 @@
 }
 
 .faqs {
-    padding: 145px 0 247px;
+    padding: 145px 0 244px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -525,7 +553,6 @@
     font-weight: 700;
     font-style: Bold;
     font-size: 64px;
-    leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -561,7 +588,6 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 18px;
-    leading-trim: NONE;
     line-height: 120%;
     letter-spacing: 0px;
     vertical-align: middle;
@@ -661,18 +687,98 @@
     font-weight: 400;
     font-style: Regular;
     font-size: 18px;
-    leading-trim: NONE;
     line-height: 150%;
     letter-spacing: 0px;
     text-align: center;
 }
 
-footer {
+.footer {
     width: 100%;
-    height: 1000px;
     background-color: rgba(5, 120, 255, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    row-gap: 192px;
+    padding-bottom: 76px;
+}
+
+.footer__main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1312px;
+    width: 100%;
+    justify-content: start;
+    row-gap: 50px;
+}
+
+.footer__logo-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.footer__links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    column-gap: 32px;
+    max-width: 640px;
+    width: 100%;
+}
+
+.footer__link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    row-gap: 38px;
+    max-width: 192px;
+    width: 100%;
+}
+
+.footer__links-compain {
+    display: flex;
+    flex-direction: column;
+    max-width: 192px;
+    width: 100%;
+    row-gap: 24px;
+}
+
+.footer__link-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 150%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.footer__link {
+    font-family: Poppins;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 150%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer__rights {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 150%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: #FFFFFF;
 }
