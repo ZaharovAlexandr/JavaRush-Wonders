@@ -17,7 +17,8 @@
     --color-border-dark: rgba(32, 32, 32, 0.5);
 
     /* стандартные размеры */
-    --max-width-site: 1312px;
+    --max-width-1440: 1312px;
+    --max-width-768: 704px;
     --max-width-content: 640px;
     --radius-main: 10px;
 }
@@ -38,8 +39,16 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    max-width: var(--max-width-site);
+    max-width: var(--max-width-1440);
     padding: 30px 0 100px;
+}
+
+.header__burger-menu {
+    border: none;
+    background-color: inherit;
+    display: none;
+    max-width: 30px;
+    max-height: 24px;
 }
 
 /* logo */
@@ -366,7 +375,7 @@
     align-items: start;
     justify-content: space-between;
     width: 100%;
-    max-width: var(--max-width-site);
+    max-width: var(--max-width-1440);
     padding-bottom: 127px;
 }
 
@@ -409,7 +418,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: var(--max-width-site);
+    max-width: var(--max-width-1440);
     min-height: 100%;
 }
 
@@ -457,21 +466,8 @@
         "box-4 box-5 box-5";
     gap: 24px 32px;
     width: 100%;
-    max-width: var(--max-width-site);
+    max-width: var(--max-width-1440);
     margin: 0 auto;
-}
-
-@media (max-width:1335px) {
-    .photo__case {
-        grid-template-columns: 340px 340px;
-        grid-template-rows: 380px 362px 425px 225px;
-        gap: 24px;
-        grid-template-areas:
-        "box-1 box-1"
-        "box-4 box-4"
-        "box-2 box-3"
-        "box-5 box-5";
-    }
 }
 
 .photo__image {
@@ -694,7 +690,7 @@
     flex-direction: column;
     row-gap: 50px;
     width: 100%;
-    max-width: var(--max-width-site);
+    max-width: var(--max-width-1440);
     justify-content: start;
 }
 

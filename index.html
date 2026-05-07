@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./vendor/normalize.css" />
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./768pxstyle.css">
   <link rel="stylesheet" href="./vendor/fonts.css" />
   <title>Wonders</title>
 </head>
@@ -32,6 +33,7 @@
         </a>
       </ul>
     </nav>
+    <button class="header__burger-menu"><img src="./assets/icons/Menu.svg" alt=""></button>
   </header>
   <main class="main">
     <div class="main__container">
@@ -124,7 +126,7 @@
         <button class="booking__submitButton" type="submit">Find My Alpine Ride</button>
       </div>
     </div>
-    <img src="./assets/images/mainCard.png" alt="MainCard" />
+    <img class="main__image" src="./assets/images/mainCard.png" alt="MainCard" />
   </main>
   <section class="facts">
     <div class="facts__case">
@@ -160,9 +162,9 @@
     <div class="apps__main-container">
       <h3 class="apps__title">Free downloads app now!</h3>
       <div class="apps__container-app">
-        <img src="./assets/images/apps-images/google-link.png" alt="">
-        <img src="./assets/images/apps-images/huawei-link.png" alt="">
-        <img src="./assets/images/apps-images/apple-link.png" alt="">
+        <img class="apps__link-image" src="./assets/images/apps-images/google-link.png" style="grid-area: google-link;" alt="">
+        <img class="apps__link-image" src="./assets/images/apps-images/huawei-link.png" style="grid-area: huawei-link;" alt="">
+        <img class="apps__link-image" src="./assets/images/apps-images/apple-link.png" style="grid-area: apple-link;" alt="">
       </div>
     </div>
   </section>
