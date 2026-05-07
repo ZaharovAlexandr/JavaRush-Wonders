@@ -449,8 +449,8 @@
 
 .photo__case {
     display: grid;
-    grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr) minmax(0, 1.35fr);
-    grid-template-rows: minmax(0, 4.2fr) minmax(0, 1fr) minmax(0, 3fr);
+    grid-template-columns: 528px 305px 416px;
+    grid-template-rows: 376px 89px 264px;
     grid-template-areas:
         "box-1 box-2 box-3"
         "box-4 box-2 box-3"
@@ -459,7 +459,19 @@
     width: 100%;
     max-width: var(--max-width-site);
     margin: 0 auto;
-    aspect-ratio: 1312 / 777;
+}
+
+@media (max-width:1335px) {
+    .photo__case {
+        grid-template-columns: 340px 340px;
+        grid-template-rows: 380px 362px 425px 225px;
+        gap: 24px;
+        grid-template-areas:
+        "box-1 box-1"
+        "box-4 box-4"
+        "box-2 box-3"
+        "box-5 box-5";
+    }
 }
 
 .photo__image {
