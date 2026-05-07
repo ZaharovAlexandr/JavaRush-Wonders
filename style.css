@@ -144,7 +144,7 @@
     box-sizing: border-box;
 }
 
-.booking__radio:checked + .booking__fake-radio {
+.booking__radio:checked+.booking__fake-radio {
     background-color: var(--color-white);
     border: 6px solid var(--color-primary);
 }
@@ -753,5 +753,51 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: -2%;
+    color: var(--color-white);
+}
+
+.burgermenu {
+    display: none;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    position: fixed;
+    top: 116px;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    z-index: 300;
+    background-color: rgba(5, 120, 255, 1);
+
+}
+
+.burgermenu_active {
+    display: flex;
+}
+
+.burger-menu__link-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 94px;
+    padding-top: 130px;
+    padding-left: 0;
+    align-items: start;
+    margin: 0;
+    max-width: 704px;
+    width: 100%;
+}
+
+.burger-menu__link {
+    text-align: end;
+    text-decoration: none;
+    border: none;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
     color: var(--color-white);
 }
