@@ -1,4 +1,6 @@
 export function initStation() {
+    
+    //Массив станций
     const Stations = [
     "Zermatt Bus Terminal",
     "Interlaken Ost Bus Station",
@@ -55,11 +57,15 @@ export function initStation() {
     "Kranjska Gora Avtobusna Postaja"
 ];
 
+
+//Универсальная функция
 function stationListner(inputButtonClass, helperCaseClass, helperTextCaseClass) {
+    //Нахождение переменных
     const inputButton = document.querySelector(inputButtonClass);
     const helperCase = document.querySelector(helperCaseClass);
     const helperTextCase = document.querySelectorAll(helperTextCaseClass);
 
+    //Слушатели показа и снятия окна с подсказками
     inputButton.addEventListener('focus', function () {
         helperCase.classList.add('booking__station-help_active');
     })
@@ -67,20 +73,25 @@ function stationListner(inputButtonClass, helperCaseClass, helperTextCaseClass) 
         helperCase.classList.remove('booking__station-help_active');
     })
 
+    //Цикл для замены значений в поле подсказок
     for (let i = 0; i < helperTextCase.length; i++) {
-        helperTextCase[i].addEventListener('mousedown', (e) => e.preventDefault())
+        helperTextCase[i].addEventListener('mousedown', (e) => e.preventDefault())  //Снятие стандандарта, чтобы срабатывало нажатие
+        
+        //Слушатель на кнопки в подсказках
         helperTextCase[i].addEventListener('click', function () {
             inputButton.value = helperTextCase[i].textContent;
-            inputButton.blur();
+            inputButton.blur(); //Снятие фокуса после выбора текста
         })
     }
 
+    //Слушатель проверки значений из массива
     inputButton.addEventListener('input', function () {
         let b = Stations.filter(item => {
             if ((item.toLowerCase()).includes(inputButton.value.toLowerCase())) {
                 return true;
             }
         })
+        //Приписывание новых значений подсказок
         for (let i = 0; i < helperTextCase.length; i++) {
             helperTextCase[i].textContent = b[i];
         }
@@ -88,6 +99,7 @@ function stationListner(inputButtonClass, helperCaseClass, helperTextCaseClass) 
 
 }
 
+//Вызов функций
 stationListner(".booking__station-input_departure", ".booking__station-help_departure", ".booking__station-help-button_departure")
 stationListner(".booking__station-input_arrival", ".booking__station-help_arrival", ".booking__station-help-button_arrival")
 }
