@@ -1,73 +1,11 @@
-const minusButton = document.getElementById('minus');
-const plusButton = document.getElementById('plus');
-const personNumber = document.getElementById('personNumber')
-const minusSVG = document.getElementById('minusSVG')
-const departureDate = document.getElementById('departureDate')
-const departureSpan = document.getElementById('departureSpan')
-const returnDate = document.getElementById('returnDate')
-const returnSpan = document.getElementById('returnSpan')
-const radioTwoWayButton = document.getElementById('radioTwoWayButton')
-const radioOneWayButton = document.getElementById('radioOneWayButton')
-const returnDateContainer = document.getElementById('returnDateContainer')
+import { initBooking } from './scripts/booking.js';
+import { initStation } from './scripts/station.js';
+import { initFaqs } from './scripts/faqs.js';
+import { initBurgerMenu } from './scripts/burgerMenu.js';
 
-radioOneWayButton.addEventListener('click', function(){
-    returnDateContainer.classList.add('booking__station-input-date-container_disable');
-    returnDate.setAttribute('disabled','disabled')
+document.addEventListener('DOMContentLoaded', function() {
+    initBooking();
+    initStation();
+    initFaqs();
+    initBurgerMenu();
 })
-
-radioTwoWayButton.addEventListener('click', function(){
-    returnDateContainer.classList.remove('booking__station-input-date-container_disable');
-    returnDate.removeAttribute('disabled')
-})
-
-
-plusButton.addEventListener('click', function() {
-    if (personNumber.value == 1 ) {
-        minusButton.classList.remove('booking__counter-button_disabled');
-        minusButton.removeAttribute('disabled')
-        minusSVG.setAttribute('fill', '#0578FF');
-        minusSVG.setAttribute('fill-opacity', '1');
-    }
-    personNumber.value = parseInt(personNumber.value) + 1;
-})
-
-minusButton.addEventListener('click', function() {
-    if (personNumber.value == 2 ) {
-        minusButton.classList.add('booking__counter-button_disabled');
-        minusButton.setAttribute('disabled', 'disabled');
-        minusSVG.setAttribute('fill', '#20202080');
-        minusSVG.setAttribute('fill-opacity', '0.5');
-    }
-    personNumber.value = parseInt(personNumber.value) - 1;
-})
-
-departureDate.addEventListener('change', function() {
-    departureSpan.classList.add('booking__input-placeholder-date_active')
-    departureSpan.textContent = departureDate.value;
-
-})
-
-returnDate.addEventListener('change', function() {
-    returnSpan.classList.add('booking__input-placeholder-date_active')
-    returnSpan.textContent = returnDate.value;
-})
-
-
-
-
-
-const buttonFaqs = document.querySelectorAll('.faqs__button')
-const imageFaqs = document.querySelectorAll('.faqs__image')
-const textFaqs = document.querySelectorAll('.faqs__qustion-text')
-
-
-buttonFaqs.forEach((element, i) => {
-    element.addEventListener('click', function() {
-    imageFaqs[i].classList.toggle('faqs__image_active')
-    textFaqs[i].classList.toggle('faqs__qustion-text_active')
-    textFaqs[i].classList.toggle('faqs__qustion-text_positive')
-})
-});
-
-
-

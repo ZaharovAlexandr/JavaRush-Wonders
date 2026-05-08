@@ -1,4 +1,5 @@
-const Stations = [
+export function initStation() {
+    const Stations = [
     "Zermatt Bus Terminal",
     "Interlaken Ost Bus Station",
     "Grindelwald Bus Terminal",
@@ -114,4 +115,4 @@ departureButton.addEventListener('input', function() {
 departureButton.addEventListener('focus', function() {
     document.querySelector('.booking__station-help_departure').classList.toggle('booking__station-help_active')
 })
-
+}
