@@ -880,18 +880,22 @@
 
 .faqs__qustion-text {
     display: none;
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
     font-family: var(--font-main);
     font-weight: 400;
     font-size: 16px;
     line-height: 135%;
-    opacity: 0;
-    -webkit-transition: opacity 2s ease;
-    -o-transition: opacity 2s ease;
-    transition: opacity 2s ease;
 }
 
 .faqs__qustion-text_active {
     display: block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
 }
 
 .faqs__qustion-text_positive {
@@ -1149,13 +1153,20 @@
     width: 100%;
     z-index: 300;
     background-color: rgba(5, 120, 255, 1);
-
+    transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
 }
 
 .burgermenu_active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
 }
 
 .burger-menu__link-container {
