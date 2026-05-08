@@ -55,64 +55,39 @@ export function initStation() {
     "Kranjska Gora Avtobusna Postaja"
 ];
 
-const departureButton = document.querySelector('.booking__station-input_departure')
-const buttonDepartureHelper = document.querySelectorAll('.booking__station-help-button_departure');
-const arrivalButton = document.querySelector('.booking__station-input_arrival') 
-const buttonArrivalHelper = document.querySelectorAll('.booking__station-help-button_arrival');
+function stationListner(inputButtonClass, helperCaseClass, helperTextCaseClass) {
+    const inputButton = document.querySelector(inputButtonClass);
+    const helperCase = document.querySelector(helperCaseClass);
+    const helperTextCase = document.querySelectorAll(helperTextCaseClass);
 
-buttonArrivalHelper.forEach(element => {
-    element.addEventListener('mousedown', (e) => {
-        e.preventDefault();
+    inputButton.addEventListener('focus', function () {
+        helperCase.classList.add('booking__station-help_active');
     })
-})
+    inputButton.addEventListener('blur', function () {
+        helperCase.classList.remove('booking__station-help_active');
+    })
 
-buttonArrivalHelper.forEach(element => {
-    element.addEventListener('click', function(){
-        arrivalButton.value = element.textContent;
-        document.querySelector('.booking__station-help_arrival').classList.toggle('booking__station-help_active')
-    })
-});
-
-arrivalButton.addEventListener('input', function() {
-    let b = Stations.filter(item => {
-        if ((item.toLowerCase()).includes(arrivalButton.value.toLowerCase())) {
-            return true;
-        } 
-    })
-    for (let i = 0; i < buttonArrivalHelper.length; i++) {
-        buttonArrivalHelper[i].textContent = b[i];
+    for (let i = 0; i < helperTextCase.length; i++) {
+        helperTextCase[i].addEventListener('mousedown', (e) => e.preventDefault())
+        helperTextCase[i].addEventListener('click', function () {
+            inputButton.value = helperTextCase[i].textContent;
+            inputButton.blur();
+        })
     }
-})
 
-arrivalButton.addEventListener('focus', function() {
-    document.querySelector('.booking__station-help_arrival').classList.toggle('booking__station-help_active')
-})
-
-buttonDepartureHelper.forEach(element => {
-    element.addEventListener('mousedown', (e) => {
-        e.preventDefault();
+    inputButton.addEventListener('input', function () {
+        let b = Stations.filter(item => {
+            if ((item.toLowerCase()).includes(inputButton.value.toLowerCase())) {
+                return true;
+            }
+        })
+        for (let i = 0; i < helperTextCase.length; i++) {
+            helperTextCase[i].textContent = b[i];
+        }
     })
-})
 
-buttonDepartureHelper.forEach(element => {
-    element.addEventListener('click', function(){
-        departureButton.value = element.textContent;
-        document.querySelector('.booking__station-help_departure').classList.toggle('booking__station-help_active')
-    })
-});
+}
 
-departureButton.addEventListener('input', function() {
-    let b = Stations.filter(item => {
-        if ((item.toLowerCase()).includes(departureButton.value.toLowerCase())) {
-            return true;
-        } 
-    })
-    for (let i = 0; i < buttonDepartureHelper.length; i++) {
-        buttonDepartureHelper[i].textContent = b[i];
-    }
-})
-
-departureButton.addEventListener('focus', function() {
-    document.querySelector('.booking__station-help_departure').classList.toggle('booking__station-help_active')
-})
+stationListner(".booking__station-input_departure", ".booking__station-help_departure", ".booking__station-help-button_departure")
+stationListner(".booking__station-input_arrival", ".booking__station-help_arrival", ".booking__station-help-button_arrival")
 }
