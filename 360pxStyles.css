@@ -1,0 +1,185 @@
+@media (max-width: 740px) {
+    /* haeder */
+    .header {
+        max-width: var(--max-width-360);
+        padding-bottom: 60px;
+    }
+
+    /* logo */
+    .logo__text_disable {
+        display: none;
+    }
+
+    /* main */
+    .main {
+        max-width: var(--max-width-360);
+        padding-bottom: 125px;
+    }
+
+    .main__container {
+        row-gap: 24px;
+    }
+
+    .main__title {
+        font-size: 32px;
+    }
+
+    .main__paragraph {
+        font-size: 11px;
+    }
+
+    /* booking */
+    .booking {
+        row-gap: 24px;
+    }
+
+    .booking__way-container {
+        padding: 0 8px;
+    }
+
+    .booking__radio-container {
+        font-size: 12px;
+    }
+
+    .booking__station-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr, 4);
+        row-gap: 24px;
+    }
+
+    .booking__station-input {
+        max-width: 100%;
+    }
+
+    .booking__station-input-date-container {
+        max-width: 100%;
+    }
+
+
+    /* facts */
+    .facts {
+        min-height: 259px;
+    }
+
+    .facts__case {
+        max-width: var(--max-width-360);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "photos kilometrs"
+        "years altitude";
+        row-gap: 30px;
+        column-gap: 36px;
+    }
+
+    .facts__title {
+        font-size: 40px;
+    }
+    .facts__text {
+        font-size: 16px;
+    }
+    .facts__text-container {
+        min-width: 137px;
+    }
+
+    /* photo */
+    .photo {
+        max-width: var(--max-width-360);
+        row-gap: 30px;
+        padding-top: 72px;
+        padding-bottom: 66px;
+    }
+    .photo__title {
+        font-size: 32px;
+    }
+    .photo__case {
+        grid-template-columns: 320px;
+        grid-template-rows: 220px 209px 472px 637px 141px;
+        grid-template-areas: 
+        "box-1"
+        "box-4"
+        "box-2"
+        "box-3"
+        "box-5";
+        row-gap: 12px;
+    }
+    .photo__image {
+        object-fit: cover;
+    }
+    
+    /* apps */
+    .apps {
+        min-height: 400px;
+    }
+    .apps__main-container {
+        max-width: 290px;
+        row-gap: 30px;
+    }
+    .apps__container-app {
+        display: flex;
+        flex-direction: column;
+    }
+    .apps__title {
+        font-size: 32px;
+        line-height: 150%
+    }
+    .apps__link-image {
+        max-width: 168px;
+    }
+    .apps__link-image_apple {
+        max-height: 50px;
+    }
+
+    /* faqs */
+    .faqs {
+        padding-top: 80px;
+        padding-bottom: 156px;
+    }
+
+    .faqs__main-container {
+        max-width: var(--max-width-360);
+    }
+
+    .contact__container {
+        max-width: var(--max-width-360);
+        margin-top: -97px;
+    }
+
+    .contact__title {
+        font-size: 36px;
+    }
+
+    .contact__contacts-style {
+        font-size: 20px;
+    }
+
+    .contact__adress {
+        font-size: 18px;
+    }
+
+    .footer__main-container {
+        max-width: var(--max-width-360);
+        row-gap: 40px;
+    }
+
+    .footer__logo-links-container {
+        row-gap: 40px;
+    }
+    .footer__links-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 42px;
+        row-gap: 20px;
+    }
+    .footer__link-container {
+        row-gap: 24px;
+        max-width: 140px;
+        justify-content: space-around;
+        min-height: 100%;
+    }
+    .footer__rights-br {
+        display: none;
+    }
+}

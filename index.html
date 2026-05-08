@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./vendor/normalize.css" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./768pxstyle.css">
+  <link rel="stylesheet" href="./360pxStyles.css">
   <link rel="stylesheet" href="./vendor/fonts.css" />
   <title>Wonders</title>
 </head>
@@ -16,7 +17,7 @@
   <header class="header">
     <div class="logo__container">
       <img class="logo__image" src="./assets/icons/Logo.svg" alt="Логотип" />
-      <span class="logo__text">Wonders</span>
+      <span class="logo__text logo__text_disable">Wonders</span>
     </div>
     <nav class="navigation">
       <ul class="navigation__link-container">
@@ -140,19 +141,19 @@
   </main>
   <section class="facts">
     <div class="facts__case">
-      <div class="facts__text-container">
+      <div class="facts__text-container" style="grid-area: kilometrs;">
         <h2 class="facts__title">68k+</h2>
         <span class="facts__text">Track kilometers</span>
       </div>
-      <div class="facts__text-container">
+      <div class="facts__text-container" style="grid-area: photos;">
         <h2 class="facts__title">1.4M+</h2>
         <span class="facts__text">Photos Taken</span>
       </div>
-      <div class="facts__text-container">
+      <div class="facts__text-container" style="grid-area: altitude;">
         <h2 class="facts__title">23M+</h2>
         <span class="facts__text">Altitude Gained</span>
       </div>
-      <div class="facts__text-container">
+      <div class="facts__text-container" style="grid-area: years;">
         <h2 class="facts__title">165+</h2>
         <span class="facts__text">Years of history</span>
       </div>
@@ -174,7 +175,7 @@
       <div class="apps__container-app">
         <img class="apps__link-image" src="./assets/images/apps-images/google-link.png" style="grid-area: google-link;" alt="">
         <img class="apps__link-image" src="./assets/images/apps-images/huawei-link.png" style="grid-area: huawei-link;" alt="">
-        <img class="apps__link-image" src="./assets/images/apps-images/apple-link.png" style="grid-area: apple-link;" alt="">
+        <img class="apps__link-image apps__link-image_apple" src="./assets/images/apps-images/apple-link.png" style="grid-area: apple-link;" alt="">
       </div>
     </div>
   </section>
@@ -287,7 +288,7 @@
           </div>
         </div>
       </div>
-      <p class="footer__rights">English: © 2025 Peak Passages.<br>
+      <p class="footer__rights">English: © 2025 Peak Passages.<br class="footer__rights-br">
         All Rights Reserved (Especially the Window Seats).</p>
     </div>
   </footer>
