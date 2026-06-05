@@ -5,7 +5,6 @@ export function initBurgerMenu() {
 
     burgerbutton.addEventListener('click', function() {
         burgerMenu.classList.toggle('burgermenu_active')
-        console.log(burgerMenuIcon.getAttribute('src'))
         if (burgerMenuIcon.getAttribute('src') === './assets/icons/Menu.svg') {
             burgerMenuIcon.setAttribute('src', './assets/icons/Close.svg')
         } else {
