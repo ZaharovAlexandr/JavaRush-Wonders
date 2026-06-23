@@ -67,6 +67,7 @@ export function initStation() {
         //Функция добавления элемента на страницу
         function addElement(number, stationMas) {
             const newItem = document.createElement('button');
+                    newItem.setAttribute('type', 'button')
                     newItem.classList.add('booking__station-help-button')
                     newItem.textContent = stationMas[number]
                     newItem.addEventListener('mousedown', (e) => e.preventDefault())

@@ -11,12 +11,18 @@ export function initBooking() {
     const radioOneWayButton = document.getElementById('radioOneWayButton')
     const returnDateContainer = document.getElementById('returnDateContainer')
 
-    radioOneWayButton.addEventListener('click', function () {
+    document.querySelectorAll('.booking__radio').forEach(radio => {
+    radio.addEventListener('click', (e) => {
+        console.log('Клик зафиксирован на инпуте:', e.target.id);
+    });
+});
+
+    radioOneWayButton.addEventListener('change', function () {
         returnDateContainer.classList.add('booking__station-input-date-container_disable');
         returnDate.setAttribute('disabled', 'disabled')
     })
 
-    radioTwoWayButton.addEventListener('click', function () {
+    radioTwoWayButton.addEventListener('change', function (e) {
         returnDateContainer.classList.remove('booking__station-input-date-container_disable');
         returnDate.removeAttribute('disabled')
     })

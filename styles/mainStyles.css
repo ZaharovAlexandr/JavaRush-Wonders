@@ -198,13 +198,13 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
+    cursor: pointer;
 }
 
 .booking__radio {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    transform: scale(0); /* Безопасно убирает физический размер, сохраняя фокус */
+    opacity: 0;
 }
 
 .booking__fake-radio {
@@ -213,6 +213,7 @@
     height: 18px;
     background-color: var(--color-gray-semi);
     border-radius: 50%;
+    pointer-events: none;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }

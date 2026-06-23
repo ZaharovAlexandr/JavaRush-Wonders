@@ -23,7 +23,8 @@
         <li><a class="navigation__link" href="#">Sign Up</a></li>
       </ul>
     </nav>
-    <button class="header__burger-menu"><img class="header__burger-menu-icon" src="./assets/icons/Menu.svg" alt=""></button>
+    <button class="header__burger-menu"><img class="header__burger-menu-icon" src="./assets/icons/Menu.svg"
+        alt=""></button>
   </header>
   <div class="burgermenu">
     <ul class="burger-menu__link-container">
@@ -40,21 +41,22 @@
         We sell tickets to the best seats in the house – houses on wheels,
         that is! Get ready for jaw-dropping views without breaking a sweat.
       </p>
-      <div class="booking">
+      <form class="booking">
         <div class="booking__way-container">
-          <label class="booking__radio-container">
+          <label class="booking__radio-container" for="radioTwoWayButton">
             <input class="booking__radio" type="radio" name="way" checked id="radioTwoWayButton" />
             <span class="booking__fake-radio"></span>
             Round trip
           </label>
-          <label class="booking__radio-container">
+
+          <label class="booking__radio-container" for="radioOneWayButton">
             <input class="booking__radio" type="radio" name="way" id="radioOneWayButton" />
             <span class="booking__fake-radio"></span>
             One Way
           </label>
           <div class="booking__counter-container">
             <img src="./assets/icons/Person.svg" alt="person" />
-            <button class="booking__counter-button booking__counter-button_disabled" disabled id="minus">
+            <button type="button" class="booking__counter-button booking__counter-button_disabled" disabled id="minus">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="minusSVG"
                   d="M5.22043 9.22C4.78043 9.22 4.44043 9.56 4.44043 10C4.44043 10.44 4.78043 10.78 5.22043 10.78H14.7804C15.2204 10.78 15.5604 10.44 15.5604 10C15.5604 9.56 15.2204 9.22 14.7804 9.22H9.22043H5.22043Z"
@@ -62,7 +64,7 @@
               </svg>
             </button>
             <input class="booking__counter-number" type="number" value="1" min="1" id="personNumber" />
-            <button class="booking__counter-button" id="plus">
+            <button type="button" class="booking__counter-button" id="plus">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M9.2181 9.21836H5.22305C4.79136 9.21836 4.44141 9.56831 4.44141 10C4.44141 10.4317 4.79136 10.7816 5.22305 10.7816H9.2181V14.7767C9.2181 15.2084 9.56805 15.5583 9.99974 15.5583C10.4314 15.5583 10.7814 15.2084 10.7814 14.7767V10.7816H14.7764C15.2081 10.7816 15.5581 10.4317 15.5581 10C15.5581 9.56831 15.2081 9.21836 14.7764 9.21836H10.7814V5.22331C10.7814 4.79162 10.4314 4.44167 9.99974 4.44167C9.56805 4.44167 9.2181 4.79162 9.2181 5.22331V9.21836Z"
@@ -112,8 +114,8 @@
             </div>
           </label>
         </div>
-        <button class="booking__submitButton" type="submit">Find My Alpine Ride</button>
-      </div>
+        <button id="submitButton" class="booking__submitButton" type="submit">Find My Alpine Ride</button>
+      </form>
     </div>
     <img class="main__image" src="./assets/images/mainCard.png" alt="MainCard" />
   </main>
